@@ -1,0 +1,163 @@
+
+
+.wrapper
+{
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 400px auto 100px;
+    grid-template-areas: 
+    "speaker-header"
+    "spoker-banner"
+    "spoker-content"
+    "main-footer";
+}
+
+.speaker-header
+{
+    grid-area:speaker-header;
+    background:#293f50;
+}
+
+.spoker-banner
+{
+    grid-area: spoker-banner;
+  
+}
+#spoker-Aaron
+{
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)0%, transparent),url("../../img/aaronirizarry.jpg");
+    background-size: cover;
+    background-position-x: 10%;
+}
+#spoker-Adam
+{
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)0%, transparent),url("../../img/team-adam-connor-hs.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#spoker-AjSelf
+{
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)0%, transparent),url("../../img/ajself-1.png");
+    background-size: cover;
+    background-position: center;
+}
+#spoker-Arman-Ghosh
+{
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)0%, transparent),url("../../img/1523004_10102549185877962_1563967251_o.jpg");
+    background-size: cover;
+    background-position-y: 10%;
+}
+#spoker-Bermon-painter
+{
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)0%, transparent),url("../../img/bermon-painter.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#spoker-Shay-howe
+{
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)0%, transparent),url("../../img/shay.jpg");
+    background-size: cover;
+    background-position: center;  
+}
+.spoker-content
+{
+    grid-area:spoker-content;
+     background:#a4d4b2;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:1rem;
+    
+}
+.content-sub-heading
+{
+    font-size: 1.1rem;
+    color:white;
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.content-main-heading
+{
+    font-size: 2.5rem;
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold; 
+    color:white;
+    margin-top:10px;
+
+}
+.content-underline-heading
+{
+    width: 100px;
+    height:4px;
+    background:white;
+    margin-top:5px;
+}
+.content-title
+{
+    font-size: 0.9rem;
+    color:white;
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold;
+    margin:15px 0 5px 0;
+    font-style:italic ;
+    line-height: 1.6;
+}
+.content-info
+{
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Lato', sans-serif; 
+    padding:0.5rem 1.2rem 0.5rem 0.5rem;
+    line-height: 1.8;
+    font-weight: 600;
+}
+.content-info a
+{
+    color:white;
+    
+}
+
+
+.main-footer
+{
+    grid-area:main-footer;
+    background:#293f50;
+}
+
+@media(min-width:640px)
+{
+    .wrapper
+    {
+       
+        grid-template-rows: 100px 600px auto 100px;
+    }
+}
+
+ @media(min-width:900px)
+{
+    .wrapper
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 100px auto  100px;
+        grid-template-areas: 
+        "speaker-header speaker-header"
+        "spoker-banner spoker-content"
+        "main-footer main-footer";
+    }
+    .content-sub-heading
+    {
+        margin-top:20px;
+    }
+    .content-info
+{
+    font-size: 1.2rem;
+   
+}
+   
+    #spoker-Aaron
+{
+    background-position-x:23%;
+}
+} 

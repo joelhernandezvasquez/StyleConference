@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="share.js"></script>
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <div class="wrapper">
+    
+        <header class="main-header">
+          
+          <div class="logo-container">
+            <a href="index.html" class="logo"> STYLES CONFERENCE</a>
+          
+
+            <div class="menu-icon">
+                <div class="bars">
+                
+                    <div class="bar1"> </div>
+                    <div class="bar2"> </div>
+                    <div class="bar3"> </div>
+                
+                </div>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul class="desktop-nav-items">
+                     <li> <a href="index.html">Home</a> </li> 
+                    <li> <a href="speakers/index.html">Speakers</a> </li> 
+                    <li> <a href="schedule/index.html">Schedule</a> </li>
+                    <li> <a href="venue/index.html">Venue</a> </li> 
+                     <div id="register-cta"><li> <a href="register/index.html">Register</a> </li> </div>
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <nav class="mobile-nav">
+            
+            <ul class="mobile-nav-items">
+                <div> <li> <a href="index.html">Home</a> </li></div> 
+                <div><li> <a href="speakers/index.html">Speakers</a> </li> </div>
+                <div><li> <a href="schedule/index.html">Schedule</a> </li> </div>
+                <div><li> <a href="venue/index.html">Venue</a> </li> </div>
+                 <div id="register-cta"><li> <a href="register/index.html">Register</a> </li> </div>
+            </ul>
+        
+        </nav>
+          
+            
+    </header> 
+
+    
+
+   
+      
+    <section class="banner">
+      
+        <h1 class="banner-title">Dedicated to the Craft of Building Websites</h1>
+        <p class="banner-content">Every year the brightest web designers and front-end developers descend on
+             Chicago to discuss the latest tech logies. 
+            Join us this August!</p>
+        <button class="banner-register-cta"> <a href="register/index.html"> REGISTER NOW</a> </button>
+
+
+    </section>
+    
+    <section class="features-conference"> 
+
+          <section class="card-feature">
+           <a href="#"> <img src="img/David-Parrish-EVCOM.jpg"></a>
+           <h2 class="card-feature-title"> World Class Speakers</h2>
+           <p class="card-feature-content">Joining us from all around the world are over twenty fantastic speakers, here to share their stories.</p>
+
+        </section>
+
+          <section class="card-feature">
+            <a href="#"> <img src="img/AC16-laughing-e1486506188658.jpg"></a>
+           <h2 class="card-feature-title"> Three Inspiring Days</h2>
+           <p class="card-feature-content">Enjoy three inspiring and action-packed days of tals, gatherings, and all-around good times.</p>
+
+          </section>
+
+          <section class="card-feature">
+            <a href="#"> <img src="img/1200px-Chicago_Theater.jpg"></a>
+            <h2 class="card-feature-title"> The Chicago Theater</h2>
+            <p class="card-feature-content">Within the heart of downtown Chicago, The Chicago Theatre will provide a beautiful conference venue.</p>
+          </section>
+
+       </section>
+
+   <footer class="main-footer">
+    
+        <div> <p>© Styles Conference 2020</p> </div>
+        
+        <nav class="footer-nav">
+            <ul class="footer-nav-items">
+                <li> <a href="index.html">Home</a> </li> 
+               <li> <a href="speakers/index.html">Speakers</a> </li> 
+               <li> <a href="schedule/index.html">Schedule</a> </li>
+               <li> <a href="venue/index.html">Venue</a> </li> 
+               <li> <a href="register/index.html">Register</a> </li>
+           </ul>
+        </nav>
+    
+   </footer>
+</div>
+
+<script>
+    const menuIconButton = document.querySelector(".menu-icon");
+    const mobileNavButton = document.querySelector(".mobile-nav");
+    const bannerTitle = document.querySelector(".banner-title");
+    const bannerContent = document.querySelector(".banner-content");
+    const registerButton = document.querySelector(".banner-register-cta");
+    menuIconButton.addEventListener("click",openMobileMenu);
+    window.onload = moveBannerTitle();
+</script>
+    
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+.wrapper
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:100px 400px auto auto 100px;
+    grid-template-areas:
+    "register-header"
+    "register-banner"
+    "conference-pass"
+    "register-form"
+    "main-footer";
+}
+
+.register-header
+{
+    grid-area:register-header;
+   background:#293f50;
+}
+
+.register-banner
+{
+    grid-area:register-banner;
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)40%, transparent),url("../img/jakob-dalbjorn-cuKJre3nyYc-unsplash.jpg");
+    background-size: cover;
+    background-position:center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register-banner h1
+{
+    text-align: center;
+    margin-top:10px;
+}
+.register-banner p
+{
+    font-size: 1.3rem;
+}
+.conference-pass
+{
+    grid-area:conference-pass;
+    width:95%;
+    box-shadow: 3px 3px 5px 3px rgba(100, 136, 128, 0.3);
+    border-radius: 5px;
+    padding:1rem;
+    margin:1.2rem auto;
+    display: flex;
+    flex-direction: column;
+  
+}
+.conference-pass h1
+{
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold;
+    color:#648880;
+    font-size: 1.5rem;
+   margin:0.8rem 0 0.4rem 0 ;
+}
+.conference-pass h2
+{
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold;
+    color:#648880;
+    font-size: 1.2rem;
+    margin:0.8rem 0 0.4rem 0 ;  
+}
+.conference-pass span
+{
+    font-family: 'Lato', sans-serif; 
+    font-size: 1rem;
+    color:silver;
+    font-weight: bold; 
+}
+.conference-pass p
+{
+    font-family: 'Lato', sans-serif; 
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top:0.5rem;
+    word-spacing: 2px; 
+}
+.conference-pass ol
+{
+    list-style-type: square;
+    margin-left:2rem;
+    padding-bottom: 0.5rem;
+
+}
+.conference-pass ol li
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    padding:0.3rem;
+}
+
+.register-form
+{
+    grid-area:register-form;
+    box-shadow: 3px 3px 5px 3px rgba(100, 136, 128, 0.3); 
+     width:95%; 
+    margin:1rem auto;  
+
+}
+.purchase-form
+{
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+}
+.purchase-form *
+{
+    margin:0.4rem 0;
+}
+.purchase-form label
+{
+ color:#648880;
+ font-weight: bold;
+ font-size: 1.1rem;
+ font-family: 'Lato', sans-serif;
+}
+.purchase-form label,
+.purchase-form input,
+.purchase-form select
+{
+    width:100%;
+}
+.purchase-form input,
+.purchase-form select,
+.purchase-form textarea
+
+{
+    height:30px;
+    border:1px solid silver;
+}
+.purchase-form input:focus,
+.purchase-form select:focus ,
+.purchase-form textarea:focus
+{
+    outline: none;
+    background: #d8f3df;
+    border-color: #2ddf5c;
+}
+.purchase-form textarea
+{
+    height:100px;
+}
+.purchase-form button
+{
+    background:#698c84;
+    cursor: pointer;
+   color:white;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    padding:1rem;
+    border:none;
+    outline: none;
+    font-size: 1.2rem;
+    border:1px solid transparent;
+    outline: none;
+  
+}
+.purchase-form button:hover,
+.purchase-form button:active
+{
+    background:white;
+    color:#698c84;
+    border:1px solid #698c84;
+}
+
+.main-footer
+{
+    grid-area:main-footer;
+    background:#293f50;
+}
+
+@media(min-width:640px)
+{
+    .wrapper
+    {
+        grid-template-rows:100px 450px auto auto 100px; 
+    }
+    .banner-sub-heading
+    {
+        margin-top:40px;
+    }
+    .banner-info
+    {
+        width: 95%;
+        line-height: 1.8;
+        padding-top: 0;
+    }
+    
+    .register-banner p
+{
+    font-size: 1.5rem;
+}
+.conference-pass
+{
+    height: 450px;
+    padding: 1.2rem;
+  
+}
+.conference-pass ol li
+{
+   font-size: 1.1rem;
+}
+.conference-pass p
+{
+    font-size: 1.2rem;
+}
+.purchase-form textarea
+{
+    height:150px;
+}
+      
+}
+
+@media(min-width:900px)
+{
+    .wrapper
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:100px 550px auto  100px; 
+        grid-template-areas:
+        "register-header register-header"
+        "register-banner register-banner"
+        "conference-pass register-form"
+        "main-footer main-footer";
+
+    }
+    .banner-info
+    {
+        width: 80%; 
+    }
+    .register-banner p
+{
+    font-size: 1.6rem;
+}
+.conference-pass
+{
+    height: 529.13px;
+    padding: 1.2rem;
+  
+} 
+}
+
+@media(min-width:1200px)
+{
+    .banner-info
+    {
+        width: 65%; 
+    }
+    .register-banner p
+{
+    font-size: 1.7rem;
+}
+.conference-pass,
+.register-form
+{
+    max-width:580px;
+}
+}
+
+@media(min-width:1400px)
+{
+    .banner-info
+    {
+        width: 55%; 
+    }
+    .register-banner p
+{
+    font-size: 1.8rem;
+} 
+.register-form
+{
+    
+    margin:1.2rem 0; 
+    
+}
+}

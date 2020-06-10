@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue</title>
+    <script src="../share.js"></script>
+    <link rel="stylesheet" href="../share.css">
+    <link rel="stylesheet" href="venue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <div class="wrapper">
+    
+        <header class="venue-header">
+          
+          <div class="logo-container">
+            <a href="../index.html" class="logo"> STYLES CONFERENCE</a>
+          
+
+            <div class="menu-icon">
+                <div class="bars">
+                
+                    <div class="bar1"> </div>
+                    <div class="bar2"> </div>
+                    <div class="bar3"> </div>
+                
+                </div>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul class="desktop-nav-items">
+                     <li> <a href="../index.html">Home</a> </li> 
+                    <li> <a href="../speakers/index.html">Speakers</a> </li> 
+                    <li> <a href="../schedule/index.html">Schedule</a> </li>
+                    <li> <a href="../venue/index.html">Venue</a> </li> 
+                     <div id="register-cta"><li> <a href="../register/index.html">Register</a> </li> </div>
+                </ul>
+            </nav>
+        </div>
+
+        
+
+        <nav class="mobile-nav">
+            
+            <ul class="mobile-nav-items">
+                <div> <li> <a href="../index.html">Home</a> </li></div> 
+                <div><li> <a href="../speakers/index.html">Speakers</a> </li> </div>
+                <div><li> <a href="../schedule/index.html">Schedule</a> </li> </div>
+                <div><li> <a href="index.html">Venue</a> </li> </div>
+                 <div id="register-cta"><li> <a href="../register/index.html">Register</a> </li> </div>
+            </ul>
+        
+        </nav>
+          
+            <nav>
+             
+            </nav>
+
+    </header> 
+
+   
+    <section class="venue-banner">
+      
+        <h5 class="banner-sub-heading"> Venue</h5>
+  <h1 class="banner-main-heading"> Our Venues</h1>
+  <div class="underline-heading"> </div>
+  <p class="banner-info">The conference is held at The Chicago Theatre, a beautiful historical landmark. 
+      The conference hotel, Four Seasons, is a short walk away down State Street.</p>
+    
+
+
+    </section>
+    
+    <section class="Chicago-theatre">
+
+        <div class="Chicago-theatre-info card-contact-box">
+          <h1> Chicago Theather</h1>
+          <p>175 N State St Chicago, IL 60601</p>
+          <a href="https://www.msg.com/the-chicago-theatre?cmp=van_chicagotheatre"> thechicagotheatre.com</a>
+          <p>(312) 462-6300</p>
+        </div>
+
+        <div class="Chicago-theatre-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.3462350584573!2d-87.62930198450842!3d41.8854103729356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca55810a493%3A0x4700ddf60fcbfad6!2sThe%20Chicago%20Theatre!5e0!3m2!1sen!2sus!4v1589920167250!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+
+    <section class="four-season-hotel">
+        <div class="four-season-info card-contact-box">
+            <h1> Four Seasons</h1>
+            <p>120 E Delaware Chicago, IL 60611</p>
+            <a href="https://www.fourseasons.com/chicago/"> fourseasons.com</a>
+            <p>(312) 280-8800</p>
+          </div> 
+
+          <div class="four-season-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.6967331219766!2d-87.62732818450806!3d41.899378772061226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd353c38dcf9b%3A0x403a636ca96a613c!2sFour%20Seasons%20Hotel%20Chicago!5e0!3m2!1sen!2sus!4v1589920686720!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+    </section>
+
+         
+
+   <footer class="main-footer">
+    
+    <div> <p>© Styles Conference 2020</p></div>
+
+    <nav class="footer-nav">
+        <ul class="footer-nav-items">
+            <li> <a href="../index.html">Home</a> </li> 
+           <li> <a href="../speakers/index.html">Speakers</a> </li> 
+           <li> <a href="../schedule/index.html">Schedule</a> </li>
+           <li> <a href="../venue/index.html">Venue</a> </li> 
+           <li> <a href="../register/index.html">Register</a> </li>
+       </ul>
+    </nav>
+    
+   </footer>
+</div>
+
+<script>
+    const menuIconButton = document.querySelector(".menu-icon");
+    const mobileNavButton = document.querySelector(".mobile-nav");
+    const bannerTitle = document.querySelector(".banner-title");
+    const bannerContent = document.querySelector(".banner-content");
+    const registerButton = document.querySelector(".banner-register-cta");
+    menuIconButton.addEventListener("click",openMobileMenu);
+  
+</script>
+    
+</body>
+
+</html>

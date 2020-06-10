@@ -1,0 +1,301 @@
+
+.wrapper
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:100px 350px 3140px 100px;
+    grid-template-areas:
+    "schedule-header"
+    "banner"
+    "schedule-tabs"
+    "main-footer";
+
+}
+
+.schedule-header
+{
+    grid-area:schedule-header;
+    background:#293f50;  
+
+}
+
+.banner
+{
+    grid-area:banner;
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)5%, transparent),url("../img/bigstock-Speaker-at-Business-Conference-64962394.jpg");
+  background-size: cover;
+  background-position:center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.schedule-tabs
+{
+    grid-area:schedule-tabs;
+   background:#293f50;
+   border-bottom: 1px solid #648880;
+  
+
+}
+
+
+.menu-tabs
+{
+   width:320px;
+   height:202px;
+   margin:1.2rem auto; 
+   border:1px solid black; 
+}
+.menu-tabs a
+{
+    text-decoration: none; 
+    transition: background 0.3s ease-out,color 0.4s ease-out;
+    color:#bcbdce; 
+}
+.menu-tabs a:hover,
+.menu-tabs a:active
+{
+    background:white;
+    color:#648880;
+}
+.day
+{
+    width:100%;
+    height:66px;
+    background:#648880;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+    
+}
+.menu-tabs div
+{
+    width:80%;
+    height:22px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.tabs-content
+{
+    /* border:2px solid white; */
+    position: relative;
+    
+}
+.tab-content
+{
+    width:100%;
+    /* border:1px solid red; */
+     position:absolute; 
+     display: none;
+}
+.timing-box
+{
+  width:90%;
+  height:250px;
+  background:#648880;
+  margin:0.7rem auto;
+  padding:1rem;
+  color:#bcbdce; 
+}
+.time-text
+{
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    word-spacing: 5px;
+
+}
+
+.activity-description span
+{
+    font-style: italic;
+}
+.small-text
+{
+    font-size: 1.1rem;
+    font-family: 'Lato', sans-serif;
+    margin-top:0.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.is-selected
+{
+    background:white;
+    color:#648880 !important;
+    
+}
+.visible
+{
+    display:block;
+   
+}
+
+.main-footer
+{
+    grid-area:main-footer;
+}
+
+@media(min-width:640px)
+{
+    .wrapper
+    {
+       grid-template-rows:100px 400px 2650px 100px;
+    } 
+    .timing-box
+    {
+     
+      height:200px;
+       
+    } 
+}
+
+@media(min-width:767px)
+{
+    .wrapper
+    {
+       grid-template-rows:100px 400px 2150px 100px;
+    } 
+
+.schedule-tabs
+{
+    padding:1rem;
+}
+    .menu-tabs
+{
+   width:98%;
+   height:72px;
+   display:flex;
+   flex-direction: row;
+   border: none;
+   /* max-width: 800px; */
+   margin-bottom: -6px;
+
+   
+}
+.menu-tabs a
+{
+    margin-left: 2rem;
+}
+.day
+{
+    padding:0.5rem;
+    
+}
+
+.menu-tabs div
+{
+    font-size: 1.2rem; 
+}
+.tabs-content
+{
+    width:99%;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+.day
+{
+    width:200px;
+      
+}
+
+.is-selected
+{
+   border-top:3px solid #648880;
+   border-right:3px solid #648880;
+   border-bottom:none;
+   border-left:3px solid #648880;
+   
+}
+.visible
+{
+    border:3px solid #648880;
+}
+.timing-box
+{
+  width:98%;
+  height:170px;
+  display:grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  padding:0.5rem;
+}
+.time-text
+{
+    font-size: 0.9rem;
+    word-spacing: 0;
+    padding:0.5rem;
+}
+
+.small-text
+{
+    line-height: 1.6;
+    margin-top:0;
+}
+
+}
+
+@media(min-width:900px)
+{
+    .wrapper
+    {
+       grid-template-rows:100px 550px 1850px 100px;
+    }
+
+    .banner
+    {
+        background-position-y:20%;
+    }
+    .timing-box
+    {
+     height:140px;
+    }
+
+    .schedule-tabs
+    {
+        padding-top:2rem;
+    }
+  .tabs-content,
+  .menu-tabs
+  {
+      max-width: 1200px;
+  }
+  
+
+}
+
+@media(min-width:1200px)
+{
+    .wrapper
+    {
+       grid-template-rows:100px 600px 1850px 100px;
+    }
+    .banner
+    {
+        background-position-y:20%;
+    }
+    .banner-info
+    {
+        width:65%;
+    }
+    .schedule-tabs
+    {
+        padding:1rem 0.2rem;
+    }
+    .time-text,.small-text
+    {
+        font-size: 1.2rem;
+    }
+    /* .tabs-content
+    {
+        margin-left:2rem;
+        margin-right: 0;
+    } */
+
+}

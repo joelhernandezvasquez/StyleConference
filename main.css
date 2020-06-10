@@ -1,0 +1,240 @@
+
+
+.wrapper
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 500px auto 100px;
+    grid-template-areas: 
+    "main-header"
+    "banner"
+    "features-conference"
+    "main-footer";
+   
+}
+
+.main-header
+{
+    grid-area:main-header;
+    background:#293f50;
+    /* border:1px solid red; */
+}
+
+
+.banner
+{
+    grid-area:banner;
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)10%, transparent),url("img/Westergasfabriek-Gashouder-conference.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x:80%;
+    height:500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.banner-title
+{
+  text-align: center;
+  font-size: 1.8rem;
+  color:white;
+  padding:1.2rem 0.5rem 1rem 1rem;
+  font-family: 'Lato', sans-serif;  
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top:0.5rem;
+  transform: translateX(350px);
+  transition: transform 0.5s ease-in;
+}
+.move-banner-title.banner-title
+{
+    transform: translateX(0px); 
+   
+}
+.banner-content
+{
+    font-size: 1.2rem;
+    color:white;
+    text-align: center;
+    padding:0.5rem 1rem;
+    font-family: 'Lato', sans-serif; 
+    font-weight: 700; 
+    line-height: 1.6;
+    transform:translateX(-350px);
+    transition: transform 0.9s ease-out;
+
+}
+.move-banner-content.banner-content
+{
+  transform: translateX(0px);
+}
+.banner-register-cta
+{
+    padding:1.2rem 2rem;
+    color:white;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif; 
+    background:#293f50;
+     border:3px solid white; 
+     border-radius: 5px;
+     margin-top:0.8rem;
+      opacity:0; 
+      transition: opacity 1.4s ease-out;
+}
+ .banner-register-cta a
+{
+    text-decoration: none;
+    color:white; 
+} 
+
+.showRegisterButton.banner-register-cta
+{
+    opacity: 1;
+}
+ .banner-register-cta:hover,
+.banner-register-cta:active
+{
+    cursor: pointer;
+     background:white; 
+    color:#698c84;
+    border:3px solid transparent;
+    font-weight: bold;
+} 
+.banner-register-cta:focus
+{
+    outline: none;
+}
+.features-conference
+{
+    grid-area:features-conference;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    
+}
+
+.card-feature
+{
+    width:340px;
+  height:400px;
+   margin:10px auto 20px auto; 
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.card-feature img
+{
+  width: 100%;
+}
+.card-feature-title
+{
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif; 
+    color:#648880;
+    margin:15px 0 5px 10px
+    
+}
+.card-feature-content
+{
+    font-size: 1rem;
+    color:#648880;
+    font-family: 'Lato', sans-serif; 
+    margin:10px;
+    line-height: 1.6;
+}
+
+@media(min-width:567px) and (orientation: landscape)
+{
+    .banner-title
+    {
+      font-size: 2.1rem;
+      padding:1.2rem 0.5rem 0 1rem;
+    }
+    .banner-content
+{
+    font-size: 1.5rem;
+    padding:1rem 1rem;
+    line-height: 2;
+}
+.features-conference
+{
+   grid-template-columns:repeat(auto-fit,minmax(400px,1fr));  
+}
+.card-feature
+{
+  width:60%;
+  height:470px;
+}
+.card-feature-title
+{
+    font-size: 1.6rem;    
+}
+.card-feature-content
+{
+    font-size: 1.2rem;
+    
+}
+
+}
+
+@media(min-width:600px)
+{
+
+    
+    .banner-title
+    {
+      font-size: 2.2rem;
+      padding:1.2rem 0.8rem 0 0.8rem;
+      margin-top:40px;
+    }
+    .banner-content
+{
+    font-size: 1.7rem;
+    padding:1.5rem 2rem;
+    line-height: 2;
+} 
+
+.card-feature
+{
+   width:90%; 
+  
+}
+ .features-conference
+{
+   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));  
+} 
+}
+
+@media(min-width:900px)
+{
+    
+   
+.banner-title
+    {
+      font-size: 2.4rem;
+     
+    }
+    .banner-content
+{
+    font-size: 1.9rem;
+    padding:1.2rem 9rem;  
+    
+}
+.banner-register-cta
+{
+    padding:1.4rem 2.2rem;
+   font-size: 1.2rem;  
+}
+.features-conference
+{
+   grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); 
+   padding:1rem 2rem; 
+} 
+
+.card-feature
+{
+   width:90%; 
+  
+}
+}

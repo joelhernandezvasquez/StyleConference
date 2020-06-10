@@ -1,0 +1,222 @@
+.wrapper
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 350px auto 100px;
+    grid-template-areas: 
+    "speaker-header"
+    "speaker-banner"
+    "speakers-container"
+    "main-footer";
+}
+.speaker-header
+{
+    grid-area:speaker-header;
+    background:#293f50;
+  
+}
+.speaker-banner
+{
+  grid-area: speaker-banner;
+  background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)5%, transparent),url("../img/bigstock-Speaker-at-Business-Conference-64962394.jpg");
+  background-size: cover;
+  background-position-x:20%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+.speakers-container
+{
+    grid-area: speakers-container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    padding:1rem 0.5rem;
+    background:white;
+}
+.speakers-card
+{
+     width:360px;
+     height:300px;
+     margin:10px auto;
+     font-family: 'Lato', sans-serif;
+     border-radius: 5px;
+     cursor: pointer;
+     position: relative;
+
+}
+.speakers-card a
+{
+   text-decoration: none;
+   color:white;
+   
+}
+
+
+.speakers-card h5
+{
+    text-transform: uppercase;
+}
+.speakers-card h1
+{
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.learn-more
+{
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+}
+
+.overlay
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent);
+ 
+}
+.overlay:hover,
+.overlay:active
+{
+    background:transparent;
+    color:white;
+    
+}
+#speakerCard-1
+{
+    background:url("../img/aaronirizarry.jpg");
+    /* background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent),url("../img/aaronirizarry.jpg"); */
+    background-size: cover;
+    background-position: center;  
+}
+#speakerCard-2
+{
+    background:url("../img/team-adam-connor-hs.jpg");
+    /* background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent),url("../img/aaronirizarry.jpg"); */
+    background-size: cover;
+    background-position: center;  
+}
+#speakerCard-3
+{
+    background:url("../img/ajself-1.png");
+    /* background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent),url("../img/aaronirizarry.jpg"); */
+    background-size: cover;
+    background-position: center;  
+}
+#speakerCard-4
+{
+    background:url("../img/1523004_10102549185877962_1563967251_o.jpg");
+    /* background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent),url("../img/aaronirizarry.jpg"); */
+    background-size: cover;
+    background-position-y:20%;  
+}
+#speakerCard-5
+{
+    background:url("../img/bermon-painter.jpg");
+    /* background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent),url("../img/aaronirizarry.jpg"); */
+    background-size: cover;
+    background-position: center;  
+}
+#speakerCard-6
+{
+    background:url("../img/shay.jpg");
+    /* background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)100%, transparent),url("../img/aaronirizarry.jpg"); */
+    background-size: cover;
+    background-position: center;  
+}
+.main-footer
+{
+    grid-area:main-footer;
+    background:#293f50;
+}
+
+@media(min-width:567px) and (orientation:landscape) 
+{
+    .speakers-container
+{
+  grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+  
+}
+    
+    .speakers-card
+{
+     width:85%;
+}
+    
+    #speakerCard-4
+    {
+      background-position-y:13%;  
+    }
+    #speakerCard-6
+{
+   background-position-y: 20%;  
+}
+
+}
+
+@media(min-width:640px) and (min-height:767px)
+{ 
+   
+    .wrapper
+{
+    grid-template-rows: 100px 400px auto 100px;
+
+}
+    .speakers-container
+    {
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    } 
+    .speakers-card
+{
+   width: 90%;
+
+} 
+}
+
+@media(min-width:900px)
+{
+    .wrapper
+    {
+        grid-template-rows: 100px 550px auto 100px;
+    
+    } 
+    #banner-info-container 
+    {
+        width:80%;
+    }
+
+    .speakers-container
+    {
+      grid-template-columns: repeat(auto-fit,minmax(300px,400px));
+     justify-content: center;
+    } 
+    
+    
+
+ 
+ 
+}
+
+@media(min-width:1250px)
+{
+    #banner-info-container 
+    {
+        width:65%;
+    } 
+    .speaker-banner
+{
+  background-position-y:20% ;
+} 
+}
+

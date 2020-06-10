@@ -1,0 +1,263 @@
+.wrapper
+{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:100px 300px auto auto 100px;
+    grid-template-areas:
+    "venue-header"
+    "venue-banner"
+    "Chicago-theatre"
+    "four-season-hotel"
+    "main-footer";
+}
+
+.venue-header
+{
+    grid-area:venue-header;
+   background:#293f50;
+}
+.venue-banner
+{
+    grid-area:venue-banner;
+    background:linear-gradient(to bottom,rgba(100, 136, 128, 0.8)5%, transparent),url("../img/lance-anderson-uevmkfCH98Q-unsplash.jpg");
+    background-size: cover;
+    background-position:center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Chicago-theatre
+{
+    grid-area:Chicago-theatre;
+}
+
+.Chicago-theatre-info,
+.four-season-info
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif; 
+    padding:1rem;
+    
+}
+.Chicago-theatre-info *,
+.four-season-info *
+{
+    padding:0.5rem;
+}
+.Chicago-theatre-info h1,
+.four-season-info h1
+{
+   
+    color:white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.Chicago-theatre-info p,
+.four-season-info p
+{
+    color:silver;
+    font-size: 1.2rem;
+}
+.Chicago-theatre-info a,
+.four-season-info a
+{
+    text-decoration-color:silver;
+    font-size: 1.2rem;
+    color:white;
+}
+.Chicago-theatre-map,
+.four-season-map
+{
+ width:95%;
+ margin:0 auto;
+ 
+}
+.Chicago-theatre-map iframe,
+.four-season-map iframe
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-contact-box
+{
+  width:350px;
+  height:250px;
+  background:#698c84;
+  margin:1.2rem auto;
+}
+.four-season-hotel
+{
+    grid-area:four-season-hotel;
+ 
+}
+.main-footer
+{
+    grid-area:main-footer;
+    background:#293f50;
+}
+
+@media(min-width:567px) and (orientation:landscape)
+{
+    .wrapper
+{
+  grid-template-rows:100px 350px auto auto 100px; 
+}
+
+.card-contact-box
+{
+  width:600px;
+}
+}
+
+@media(min-width:640px)
+{
+    .wrapper
+{
+  grid-template-rows:100px 400px auto auto 100px; 
+  
+}
+.banner-info
+{
+     width:90%; 
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.card-contact-box
+{
+  width:90%;
+  height:300px;
+}
+
+.Chicago-theatre-map,
+.four-season-map
+{
+  width:90%;
+}
+.Chicago-theatre-map iframe,
+.four-season-map iframe
+{
+    
+    margin-bottom: 20px;
+}
+}
+
+@media(min-width:900px)
+{
+    .wrapper
+    {
+      grid-template-rows:100px 500px auto auto 100px; 
+      
+    }
+    .venue-banner
+    {
+        background-position-y:20% ;
+    }
+    .banner-info
+    {
+        font-size: 1.8rem;     
+    }
+    
+
+ .Chicago-theatre,
+ .four-season-hotel
+{
+    display:grid;
+    grid-template-columns: 0.6fr 1.3fr;
+    justify-content: center;
+    /* border-bottom:1px solid red; */
+    padding:1.2rem 0.5rem;
+    margin-left:3rem;
+    
+} 
+.Chicago-theatre-info,
+.four-season-info
+{
+    align-items: center;
+    justify-content:flex-start;
+    padding:0;
+    
+}
+.card-contact-box
+{
+  width:100%;
+  margin:0;
+  padding-top: 2rem;
+}
+
+.Chicago-theatre-info h1,
+.four-season-info h1
+{
+    font-size: 1.4rem;
+    padding-top:0.5rem;
+}
+.Chicago-theatre-info p,
+.four-season-info p
+{
+   font-size: 1.2rem;
+   padding:0.5rem;
+   text-align: center;
+}
+.Chicago-theatre-info a,
+.four-season-info a
+{
+    font-size: 1.3rem;
+    padding:0.5rem;
+    
+}
+
+.Chicago-theatre-map iframe,
+.four-season-map iframe
+{
+    width:100%;
+    height: 300px;
+}
+
+}
+
+@media(min-width:1200px)
+{
+    .wrapper
+    {
+      grid-template-rows:100px 600px auto auto 100px; 
+      
+    }
+    
+    .banner-info
+{
+     width:85%; 
+    font-size: 2rem;
+}
+
+.Chicago-theatre,
+ .four-season-hotel
+{
+  
+    grid-template-columns: 0.6fr 1.4fr;
+    padding:1.4rem 0.5rem 1.2rem 0.5rem;
+    
+} 
+}
+
+@media(min-width:1400px)
+{
+    .wrapper
+    {
+      grid-template-rows:100px 600px auto auto 100px; 
+      
+    }
+    .banner-info
+    {
+         width:70%;  
+    }
+
+    .venue-banner
+    {
+        background-position-y:25% ;
+    }
+}
